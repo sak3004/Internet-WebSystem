@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    margin: 5px;
+    font-family: 'Calibri Light', sans-serif;
+}
+
+body{
+    background: white;
+    box-shadow: 0 1px 1px 0
+}
+
+h2{
+    background-color: purple;
+    font-family: cursive;
+    color: white
+
+}
+
+h3{
+    background-color: Orchid ;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+aside {
+
+    width: 23.3%;
+    float: right;
+    margin-left: 0;
+    margin-top: 20px
+    box-shadow: 0 1px 1px 0
+}
+
+aside p{
+    margin: 0;
+    padding-top: 2px;
+}
+
+p{
+    margin-top: 5px;
+    text-align: center;
+}
+
+div{
+    width:75%;
+    clear:left;
+    padding-bottom:15%;
+}
+
+section{
+    margin-top: 10px;
+
+}
+
+article{
+    float:left;
+
+    width:32.2%;
+    box-shadow: 0 1px 1px 0;
+}
+h1{
+  text-align: center;
+  font-family: fantasy;
+}
+img{
+  width: 70%;
+  align-self: auto;
+}

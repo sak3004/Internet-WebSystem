@@ -1,0 +1,22 @@
+
+
+
+.button{
+    background-color:#D3D3D3 ;
+
+    color: black;
+    cursor: pointer;
+    display: inline-grid;
+    font-family: cursive;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+
+}
+.button:hover {
+    background-color: white;
+
+}

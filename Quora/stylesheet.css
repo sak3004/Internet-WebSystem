@@ -1,0 +1,426 @@
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b, u, i, center, ul, li,
+fieldset, form, label, legend, article, aside, canvas, figure, footer, header, nav, section{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html, body, .fullheight {
+  font-family: 'Calibri', sans-serif;
+  min-height: 100% !important;
+  height: 100%;
+  max-width: 100%;
+}
+.inner {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0px 20px;
+	position: relative;
+}
+
+header {
+	background: white;
+	height: 70px;
+	box-shadow: 0 2px 1px 0;
+}
+
+body {
+  line-height: 1;
+  width: inherit;
+  height: 100%;
+  font-family: 'Calibri Light', sans-serif;
+  background: #fafafa;
+}
+
+ul {
+  list-style: none;
+
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.clear{
+  clear: both;
+}
+
+.hide{
+  display: none;
+}
+
+.bg-red{
+  background-color: #b92b27;
+}
+
+.text-white{
+  color: #fff;
+}
+
+.container{
+  height: 100%;
+  width: inherit;
+  overflow: hidden;
+  margin: 0 0;
+
+}
+
+#navbar{
+  height: 54px;
+  font-weight: 900;
+}
+
+.card{
+  width: 100%;
+  background: white;
+  color: black;
+  box-shadow: 0 0px 3px 0px;
+}
+
+.logo{
+  padding: 10px 0px 10px 10px;
+  line-height: 1;
+  font-family: 'Calibri', serif;
+  font-size: 2.2em;
+  margin: 0;
+  float: left;
+  color: red;
+  font-weight: bold;
+}
+
+.ask{
+  padding: 10px 10px;
+  position: relative;
+  top: -5px;
+  font-weight: normal;
+  font-size: 0.9em;
+}
+
+.active{
+  background: #b92b27;
+  height: 30px;
+  color: white;
+  float: left;
+}
+
+/*.hover:hover{
+  background: #fafafa;
+  height: 30px;
+}*/
+
+/*.upvote:hover, .comments:hover, .downvote:hover{
+  background: #b92b27;
+  color: #fff;
+}*/
+
+.links{
+  height: 100%;
+}
+
+.links>li{
+  padding: 20px 20px 7px 20px;
+  font-family: 'Calibri', serif;
+  font-size: 1em;
+}
+
+.search-bar{
+  padding: 11px 20px !important;
+}
+
+.search-bar > input{
+  height: 32px;
+  font-size: 1.1em;
+  font-family: 'Calibri Light', sans-serif;
+  resize: none;
+  border: 1px solid #e2e2e2;
+  border-radius: 50px;
+  padding-left: 35px;
+  background: #ececec url(https://qsf.ec.quoracdn.net/-3-images.new_grid.QuoraSearch.png-26-cadc30f3f88e3504.png) no-repeat 8px center;
+  background-size: 20px;
+  /* box-shadow: inset 2px 2px 2px rgba(200,200,200,0.3); */
+  outline:  none;
+  width: 100%;
+  margin-right: 50px;
+}
+
+.search-bar > input:focus{
+  background: #fff;
+  box-shadow: inset 3px 3px 3px 0px rgba(200,200,200,0.3);
+  transition: .5s;
+}
+
+.user-pic{
+  height: 40px;
+  width: 40px;
+  position: relative;
+  top: -13px;
+  border-radius: 50%;
+}
+
+.right{
+  float: right;
+}
+
+
+.hide{
+  display: none;
+}
+
+.aside-panel{
+  font-family: 'Calibri', sans-serif;
+  width: 20vw;
+  margin: 0.5vw;
+  margin-top: 1vw;
+  padding: 1%;
+  font-size:  1.1em;
+}
+
+.aside-panel.right{
+  width: 20vw;
+  margin-top: 1vw;
+}
+
+.bg-white{
+  background-color: #fff;
+}
+
+.feeds-heading{
+  padding-bottom: 5%;
+  color: red;
+}
+
+.font-medium{
+  font-size: 1.3em;
+}
+
+.bold{
+  font-weight: 800;
+}
+
+.bolder{
+  text-shadow: 0px 1px, 1px 0px, 1px 1px;
+}
+
+.text-red{
+  color: #b92b27;
+}
+
+.centre-panel{
+  width: 48.5vw;
+  margin: 1vw;
+  padding: 1%;
+  font-size:  1.1em;
+}
+
+.panel-heading{
+  padding-bottom: 0.7%;
+}
+
+.post{
+  overflow: auto;
+  margin: 4% 1% 6% 1%;
+}
+
+.post-title{
+  padding: 1% 0%;
+  font-weight: 600;
+  font-size: 1.7em;
+}
+
+.post-pic{
+  margin-top: 1%;
+  height: 100%;
+}
+
+.post-content{
+  width: 80%;
+  margin: 1% 3%;
+  line-height: 1.5;
+}
+
+.author-pic{
+  width: 3em;
+  border-radius: 50%;
+}
+
+.author-details{
+  margin-bottom: 1%;
+}
+
+.answer{
+  margin: 3% 0%;
+  text-align: justify;
+}
+
+.upvote, .comments, .downvote{
+  margin-left: 1%;
+  border: 2px solid;
+  text-align: center;
+  transition: .5s;
+  vertical-align: middle;
+}
+
+.text-grey{
+  color: dimgrey;
+}
+
+.row{
+  margin-top: 20px;
+}
+
+.button{
+  padding: 10px 15px;
+  font-weight: normal;
+  border-radius: 50px;
+}
+
+.social-share{
+  margin-left: 1%;
+}
+
+.custom-icon {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.4);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  padding: 10px;
+  text-align: center;
+  transition: .5s;
+}
+
+.icon-wrapper {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.margin-top{
+  margin-top: 10%;
+}
+
+.fa-ul>li{
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+
+.fix-editor {
+  display: none;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-tofp: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/*.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}*/
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+.lihover{
+  float: left;;
+  padding: 10px 30px;
+  position: relative;
+  top: -5px;
+  font-weight: normal;
+  font-size: 1.3em;
+  background: #b92b27;
+  height: 30px;
+  color: white;
+  float: left;
+  font-weight: bold;
+  margin: 5px;
+}
+.text-feed{
+  color : blue;
+}
+.text-black{
+
+ font-family: 'Calibri', cursive;
+ font-weight: bold;
+}
+.updateinterests{
+    margin-top: 50px;
+    background-color:#00688B;
+    color: white;
+    padding: 5px;
+}

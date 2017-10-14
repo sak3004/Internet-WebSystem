@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>GST Tax Rates</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+  });
+  </script>
+<script src="script.js"></script>
+</head>
+<body>
+
+  <nav class="navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><i class="fa fa-resistance"></i> The Store</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#"><i class="fa fa-home"></i> Home </a></li>
+          <li><a href="#"><i class="fa fa-info"></i> About</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#"><i class="fa fa-phone"></i> Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" data-toggle="modal" data-target="#myModalCart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/fooditems/carousel-1.jpg" alt="Image">
+
+      </div>
+
+      <div class="item">
+        <img src="images/fooditems/carousel-2.jpg" alt="Image">
+
+      </div>
+
+      <div class="item">
+        <img src="images/fooditems/carousel-3.jpg" alt="Image">
+
+      </div>
+      <div class="item">
+        <img src="images/fooditems/carousel-4.jpg" alt="Image">
+
+      </div>
+      <div class="item">
+        <img src="images/fooditems/carousel-5.jpg" alt="Image">
+
+      </div>
+      <div class="item">
+        <img src="images/fooditems/carousel-6.jpg" alt="Image">
+
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <br>
+
+  <div id="tour" class="bg-1">
+
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="images/electronics/category.jpg" alt="Electronics" width="400" height="300">
+            <p><strong>Electronics</strong></p>
+
+            <button class="btn" data-toggle="modal" data-target="#myModalElectronics">Show Items</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="images/transport/category.jpg" alt="Transport" width="400" height="300">
+            <p><strong>Transport</strong></p>
+
+            <button class="btn" data-toggle="modal" data-target="#myModalTransport">Show Items</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="images/fooditems/category.jpg" alt=" FoodItems" width="400" height="300">
+            <p><strong>Food Items</strong></p>
+
+            <button class="btn" data-toggle="modal" data-target="#myModalFoodItems">Show Items</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="images/metalproducts/category.jpg" alt="Metal Products" width="400" height="300">
+            <p><strong>Metal Products</strong></p>
+
+            <button class="btn" data-toggle="modal" data-target="#myModalMetalProducts">Show Items</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="images/stationery/category.jpg" alt="Stationery" width="400" height="300">
+            <p><strong>Stationery</strong></p>
+
+            <button class="btn" data-toggle="modal" data-target="#myModalStationery">Show Items</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="images/clothes/category.jpg" alt="Clothes" width="400" height="300">
+            <p><strong>Clothes</strong></p>
+
+            <button class="btn" data-toggle="modal" data-target="#myModalClothes">Show Items</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+  <!-- Modal Electronics -->
+  <div class="modal fade" id="myModalElectronics" role="dialog" style="display: none;">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-shopping-cart"></span> Electronics</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row text-center">
+            <div class="col-xs-12 col-sm-4">
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <h4>Item Name</h4>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <h4 >Quantity</h4>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-sm-4">
+              <img src="images/electronics/mobilephone.jpg" alt="Mobile Phone" width="100" height="100">
+            </div>
+            <div class="col-sm-4">
+              <button type="button" value="Add to cart" onclick="AddtoCart('Table','Big red table',50)" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%"> Mobile Phone
+              </button>
+
+
+            </div>
+            <div class="col-sm-4">
+              <input type="number" class="inp-num" default = "1"></input>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-sm-4">
+              <img src="images/electronics/vaccumcleaner.jpg" alt="Vaccum Cleaner" width="100" height="100">
+            </div>
+            <div class="col-sm-4">
+              <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Vaccum Cleaner</button>
+            </div>
+            <div class="col-sm-4">
+              <input type="number" class="inp-num"></input>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-sm-4">
+              <img src="images/electronics/lamp.jpg" alt="Lamp" width="100" height="100">
+            </div>
+            <div class="col-sm-4">
+              <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Lamp</button>
+            </div>
+            <div class="col-sm-4">
+              <input type="number" class="inp-num"></input>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-sm-4">
+              <img src="images/electronics/shaver.jpg" alt="Shaver" width="100" height="100">
+            </div>
+            <div class="col-sm-4">
+              <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Shaver</button>
+            </div>
+            <div class="col-sm-4">
+              <input type="number" class="inp-num"></input>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-sm-4">
+              <img src="images/electronics/settopbox.jpg" alt="Mobile Phone" width="100" height="100">
+            </div>
+            <div class="col-sm-4">
+              <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Set Top Box</button>
+            </div>
+            <div class="col-sm-4">
+              <input type="number" class="inp-num"  ></input>
+            </div>
+          </div>
+
+        </br>
+        <button type="submit" class="btn btn-block">Pay
+          <span class="glyphicon glyphicon-ok"></span>
+        </button>
+
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> Cancel
+        </button>
+        <p>Need <a href="#">help?</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal Transport-->
+
+
+<div class="modal fade" id="myModalTransport" role="dialog" style="display: none;">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4><span class="glyphicon glyphicon-shopping-cart"></span> Transport</h4>
+      </div>
+      <div class="modal-body ">
+        <div class="row text-center">
+          <div class="col-xs-12 col-sm-4">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <h4>Item Name</h4>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <h4 >Quantity</h4>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/transport/car.jpg" alt="Car" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Car</button>
+
+
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/transport/bus.jpg" alt="Bus" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Bus</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/transport/cycle.jpg" alt="Cycle" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Cycle</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/transport/motorcycle.jpg" alt="Motorcycle" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Motorcycle</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/transport/tractor.jpg" alt="Tractor" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Tractor</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"  ></input>
+          </div>
+        </div>
+
+      </br>
+      <button type="submit" class="btn btn-block">Pay
+        <span class="glyphicon glyphicon-ok"></span>
+      </button>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+        <span class="glyphicon glyphicon-remove"></span> Cancel
+      </button>
+      <p>Need <a href="#">help?</a></p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!--Modal FoodItem-->
+
+
+<div class="modal fade" id="myModalFoodItems" role="dialog" style="display: none;">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4><span class="glyphicon glyphicon-shopping-cart"></span> Food Items</h4>
+      </div>
+      <div class="modal-body ">
+        <div class="row text-center">
+          <div class="col-xs-12 col-sm-4">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <h4>Item Name</h4>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <h4 >Quantity</h4>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/fooditems/pasta.jpg" alt="Car" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Pasta</button>
+
+
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/fooditems/burger.jpg" alt="Burger" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Burger</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/fooditems/pizza.jpg" alt="Pizza" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Pizza</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/fooditems/dal.jpg" alt="Dal" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Dal</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/fooditems/squash.jpg" alt="Squash" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Squash</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"  ></input>
+          </div>
+        </div>
+
+      </br>
+      <button type="submit" class="btn btn-block">Pay
+        <span class="glyphicon glyphicon-ok"></span>
+      </button>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+        <span class="glyphicon glyphicon-remove"></span> Cancel
+      </button>
+      <p>Need <a href="#">help?</a></p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!--Modal Metal Products-->
+
+<div class="modal fade" id="myModalMetalProducts" role="dialog" style="display: none;">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4><span class="glyphicon glyphicon-shopping-cart"></span> Metal Products</h4>
+      </div>
+      <div class="modal-body ">
+        <div class="row text-center">
+          <div class="col-xs-12 col-sm-4">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <h4>Item Name</h4>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <h4 >Quantity</h4>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/metalproducts/almirah.jpg" alt="Almirah" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Almirah</button>
+
+
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/metalproducts/clutch.jpg" alt="Clutch" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Clutch</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/metalproducts/rod.jpg" alt="Rod" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Rod</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/metalproducts/rims.jpg" alt="Rims" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Rims</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/metalproducts/nuts.jpg" alt="Nuts" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Nuts</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"  ></input>
+          </div>
+        </div>
+
+      </br>
+      <button type="submit" class="btn btn-block">Pay
+        <span class="glyphicon glyphicon-ok"></span>
+      </button>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+        <span class="glyphicon glyphicon-remove"></span> Cancel
+      </button>
+      <p>Need <a href="#">help?</a></p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!--Modal Stationery-->
+
+<div class="modal fade" id="myModalStationery" role="dialog" style="display: none;">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4><span class="glyphicon glyphicon-shopping-cart"></span> Stationery</h4>
+      </div>
+      <div class="modal-body ">
+        <div class="row text-center">
+          <div class="col-xs-12 col-sm-4">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <h4>Item Name</h4>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <h4 >Quantity</h4>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/stationery/pen.jpg" alt="Pen" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Pen</button>
+
+
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/stationery/pencil.png" alt="Pencil" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Pencil</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/stationery/eraser.jpg" alt="Eraser" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Eraser</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/stationery/sharpner.jpg" alt="Sharpener" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Sharpener</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/stationery/notebook.jpg" alt="Notebook" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Notebook</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"  ></input>
+          </div>
+        </div>
+
+      </br>
+      <button type="submit" class="btn btn-block">Pay
+        <span class="glyphicon glyphicon-ok"></span>
+      </button>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+        <span class="glyphicon glyphicon-remove"></span> Cancel
+      </button>
+      <p>Need <a href="#">help?</a></p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!--Modal Clothes-->
+
+<div class="modal fade" id="myModalClothes" role="dialog" style="display: none;">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4><span class="glyphicon glyphicon-shopping-cart"></span> Clothes</h4>
+      </div>
+      <div class="modal-body ">
+        <div class="row text-center">
+          <div class="col-xs-12 col-sm-4">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <h4>Item Name</h4>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <h4 >Quantity</h4>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/clothes/shirt.jpg" alt="Shirt" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Shirt</button>
+
+
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/clothes/jeans.jpg" alt="Jeans" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Jeans</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/clothes/jacket.jpg" alt="Jacket" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Jacket</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/clothes/suit.jpg" alt="Suit" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Suit</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"></input>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <img src="images/clothes/sweater.jpg" alt="Sweater" width="100" height="100">
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="hover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Rs 1000 , GST: 18%">Sweater</button>
+          </div>
+          <div class="col-sm-4">
+            <input type="number" class="inp-num"  ></input>
+          </div>
+        </div>
+
+      </br>
+      <button type="submit" class="btn btn-block">Pay
+        <span class="glyphicon glyphicon-ok"></span>
+      </button>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+        <span class="glyphicon glyphicon-remove"></span> Cancel
+      </button>
+      <p>Need <a href="#">help?</a></p>
+    </div>
+  </div>
+
+</div>
+</div>
+<!-- Cart-->
+<div class="modal fade" id="myModalCart" role="dialog" style="display: none;">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4><span class="glyphicon glyphicon-shopping-cart"></span> Cart</h4>
+      </div>
+      <div class="modal-body ">
+
+        <table class="table">
+
+        <td valign="top">
+            <table class="table" id="orderedProductsTbl">
+                <thead>
+                    <tr>
+                        <th >
+                            Name
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="orderedProductsTblBody">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" align="right" id="cart_total">
+
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </td>
+    </tr>
+</table>
+
+      </br>
+      <button type="submit" class="btn btn-block">Check Out
+        <span class="glyphicon glyphicon-ok"></span>
+      </button>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+        <span class="glyphicon glyphicon-remove"></span> Cancel
+      </button>
+      <p>Need <a href="#">help?</a></p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+
+<footer id="footer" class="container-fluid text-center">
+  <div class="row">
+				<div class="col-md-4">
+					<div class="newsletter">
+						<h3>About The Store</h3>
+						<p>A grocery store is a retail store that primarily sells food. A grocer is a bulk seller of food. Grocery stores often offer non-perishable food that is packaged in bottles, boxes, and cans; some also have bakeries, butchers, delis, and fresh produce.</p>
+						<button type="button" class="btn btn-primary btn-sm">Learn more</button></a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="QuickLinks">
+					<h3>Quick Links</h3>
+					<ul class="list list-icons list-icons-sm" style="text-align: center">
+										<li ><i class="fa fa-caret-right"></i> <a href="">The Store</a></li>
+										<li><i class="fa fa-caret-right"></i> <a href="">Buy Items</a></li>
+										<li><i class="fa fa-caret-right"></i> <a href="">Contact us</a></li>
+
+									</ul>
+
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="contact-details">
+						<h3>Contact Us</h3>
+						<ul class="contact">
+							<li>
+								<p><i class="fa fa-map-marker" ></i> <strong>Address:</strong> 6th Floor, NCL Building, E- Block, Bandra Kurla Complex, BKC Road, Bandra East, Mumbai, Maharashtra 400051.</p>
+							</li>
+							<li>
+								<p><i class="fa fa-phone"></i> <strong>Phone:</strong> 1800-1234-467</p>
+							</li>
+							<li>
+								<p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">myims@imsindia.com</a></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+</footer>
+
+</body>
+</html>
